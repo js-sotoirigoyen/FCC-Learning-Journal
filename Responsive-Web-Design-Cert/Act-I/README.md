@@ -1,0 +1,3 @@
+Since freeCodeCamp.org's [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/) process requires five different, more difficult projects, I thought I'd split my Learning Journal up into five different sections. This is the first, known as **ACT I**, and it will culminate in my creation of a "Survey Form". 
+
+**ACT I** is, itself, broken up into four smaller projects, which serve as preparation for the final Survey Form. The first involves 71 steps, the second 91, the third 94, and the fourth project involves 65 steps. I'm thinking I'll do about 50-70 steps a day, so I don't go too fast or too slow, and I estimate I should get the Certification within two weeks or so.
