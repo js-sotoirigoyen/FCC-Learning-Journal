@@ -1,0 +1,57 @@
+In general, HTML documents are structured as follows:
+1. Start with a **Declaration**, "<!DOCTYPE html>". This tells the browser to use HTML5, which is the current HTML standard.
+2. Continue into the **Root Element**. Everything is nested inside the "<html>" and "</html>" tags, and we can add a language attribute (such as "lang="en"") to specify the document's language.
+3. Move on to the **Head**. This "<head>" and "</head>" contain the metadata which is not displayed on the page, such as the "<title>", which appears as the browser tab name, and the "<meta>" tag, which can be modified with attributes such as "<meta charset="utf-8">" to set character encoding.
+4. Most of it is the **Body**. The "<body>" and "</body>" contains all of the visible content.
+5. At the bottom, you can also include the **Footer**. "<footer>" and "</footer>".
+
+HTML elements can be split into **Opening** tags (such as "<h1>"), which define the start of an element, and **Closing** tags (such as "</h1>"), which defines the end of the element. Some elements, such as "<img>" and "<input>" do not require closing tags, and, as such, are known as **Void Elements**.
+
+There are a variety of HTML elements to take note of. These include:
+- **Headings** ("<h1>" to "<h6>"): These indicate content hierarchy; only one "<h1>" should be used per page.
+- **Paragraphs**: "<p>" tags contain blocks of text.
+- **Emphasis**: There are two ways to add emphasis in text: by default, "<em>" renders *italicized* text, and "<strong>" renders **bold** text.
+- **Lists**: There are, similarly, two ways to implement lists.
+-- **Unordered List**: "<ul>" with "<li>" items (bullets).
+-- **Ordered List**: "<ol>" with "<li>" items (numbered).
+- **Comments**: "<!-- This is a comment! -->".
+- "<main>": Unique central content of the page.
+- "<section>": Groups related content, like chapters or subsections.
+- "<footer>": Contains metadata like author info or legal links.
+
+In terms of media, we can also look at:
+- "<img src="url" alt="description">": Displays an image. "alt" improves accessibility and shows fallback text.
+- "<figure>": Groups self-contained media. "<figcaption>", then, adds a caption.
+
+For links or navigation, we should also consider:
+- "<a href="url" target="_blank">Link text</a>": 
+-- "href": The destination URL.
+-- "target="_blank"": Opens link in new tab.
+-- Images can be wrapped in "<a>" tags too.
+
+We can also include web forms in our HTML pages by using:
+- "<form action="destination">": Starts a form, but inputs must have "name" attributes to be submitted.
+- **Input fields**: "<input>" is a void element.
+-- "type="text"", "type="email"", "type="password"", etc.
+-- "placeholder="hint"": Shows placeholder text as a hint.
+-- "required": Makes input mandatory.
+- **Submit button**:
+-- "<button type="submit">Send</button>": Submits the form.
+-- Buttons are inline by default (won’t appear on new lines).
+
+There are a variety of buttons, too, such as **Radio Buttons** (i.e., "type="radio""), which is a button where you have to select only one option.
+- These share a same "name" to be grouped.
+- "value" distinguishes which button was selected.
+- "checked" makes one pre-selected.
+
+There are also **Checkboxes** ("type="checkbox""), which are buttons where you can select *multiple* options.
+- Also uses "name", "value", and optionally "checked".
+
+To better improve accessibility, we can use **Labels**. We can either wrap both the input and the text in a "<label">, or, for clarity's sake, we can do:
+- "<label for="id">Text</label>", wrapping only the text, which links to whichever "<input id="id">" matches it.
+
+Finally, we can also use a few different elements for **Groupings**. These include:
+- "<fieldset>": Groups related inputs.
+- "<legend>": Sets the caption for a fieldset.
+
+Would you like this turned into a printable PDF cheat sheet or interactive HTML file for practice?
