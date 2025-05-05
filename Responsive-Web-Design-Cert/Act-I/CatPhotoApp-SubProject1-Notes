@@ -53,5 +53,3 @@ To better improve accessibility, we can use **Labels**. We can either wrap both 
 Finally, we can also use a few different elements for **Groupings**. These include:
 - "<fieldset>": Groups related inputs.
 - "<legend>": Sets the caption for a fieldset.
-
-Would you like this turned into a printable PDF cheat sheet or interactive HTML file for practice?
