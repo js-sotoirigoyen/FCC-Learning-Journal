@@ -1,0 +1,84 @@
+To style an HTML page, we use CSS (Cascading Style Sheets). CSS controls how elements look -— like their size, spacing, color, font, and more. You can start writing CSS in two ways:
+1) Inside the HTML file: Use a <style> tag inside the <head>.
+2) In a separate file: This is best for larger projects. Save the styles in a file like styles.css, and link it to your HTML using:
+    
+    <link rel="stylesheet" href="styles.css">
+
+Some things to remember about the <head> section:
+- <title> defines the tab title.
+- <meta charset="utf-8"> sets how characters are encoded.
+- <meta name="viewport" content="width=device-width, initial-scale=1.0"> ensures the site scales well on mobile.
+Both <meta> and <link> are void elements—they don’t need closing tags.
+
+In CSS, you target elements like this:
+
+    element {
+      property: value;
+    }
+
+Example:
+
+    h1 {
+      color: blue;
+    }
+
+To target a specific element by ID, use #:
+
+    #menu {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+    }
+
+To target multiple elements with the same class, use .:
+
+    .item {
+      font-size: 16px;
+    }
+
+You can also combine selectors. To target all <p> tags inside elements with the class item:
+
+    .item p {
+      display: inline-block;
+    }
+
+Comments in CSS are written like this:
+
+    /* This is a comment */
+
+When styling elements:
+- Use % for relative widths and px for fixed widths.
+- Use margin to create space around elements. auto can help center things horizontally.
+- To make inline elements behave more like block elements (i.e., taking up full lines), use display: block.
+- To place elements side-by-side, use inline-block, and manage their width.
+
+To fix spacing issues:
+- You can remove gaps in HTML between elements.
+- You can use negative margins (e.g. margin-top: -25px) to pull things closer.
+
+For text:
+- Use font-family to change the font. You can list multiple fonts for fallbacks:
+
+    body {
+      font-family: Impact, serif;
+    }
+
+For layout:
+- Use <div> as a generic container.
+- Give your container an id or class so you can style it.
+- Nest content inside the <div> to group and style it all together.
+
+Images and links have some unique properties:
+- <img> is inline by default. To center it, make it display: block and set horizontal margins to auto.
+- Links can be styled based on their state:
+
+    a:visited {} – after it’s been clicked
+
+    a:hover {} – when the mouse hovers over it
+
+    a:active {} – while clicking
+
+Finally, to visually separate content:
+- Use the <hr> tag for horizontal rules/lines.
+- You can change the look of the line using border properties in CSS.
