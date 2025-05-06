@@ -1,0 +1,77 @@
+Multiple "<meta>" elements can be included in the "<head>" to provide metadata about the page.
+- To ensure the page looks consistent across all devices, add a meta element:
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+A "<div>" without content has no default height.
+- To give it visible dimensions:
+
+  .marker {
+    height: 25px;
+    width: 200px;
+  }
+  
+- "margin: auto;" centers an element horizontally.
+- Using "margin: 10px auto;" sets vertical margins to 10px and horizontal margins to "auto".
+
+- Add multiple classes by separating them with a space:
+
+  <div class="animal dog">
+  
+- Later classes may override earlier ones (here, dog might override animal) due to CSS specificity and the cascade.
+
+There are a variety of color methods in CSS, such as RGB, which is used for screens.
+- It starts from black, adds Red, Green, Blue light. The following is black, then red, green, blue, and white:
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 255, 0);
+  background-color: rgb(0, 0, 255);
+  background-color: rgb(255, 255, 255);
+
+There's also HSL, which represents color via:
+- **Hue (0 – 360)**: Red = 0°, Green = 120°, Blue = 240°
+- **Saturation (0 – 100%)**
+- **Lightness (0 – 100%)**
+
+You can also use color gradients in CSS using the following basic syntax,
+  
+  background: linear-gradient(direction, color1, color2, ...);
+  
+- The gradient's default direction is **top to bottom*- (180°).
+- One example with direction and color-stop is as follows:
+
+  linear-gradient(90deg, red 90%, black);
+
+- This means the gradient is vertical (goes along the 90° line), red is stopped at the 90% mark of the gradient, and black fills the remainder. You can have more than just two colours, though.
+- The percentage/length after a color is optional, and without them, the colours included are evenly spaced - typically at 0%, 50%< and 100%. 
+
+When dealing with colours, be they on their own or as part of a gradient, you can also add a 4th value for opacity (0 to 1):
+
+  rgba(255, 0, 0, 0.5);
+
+- This is the "alpha", and, here, it's set to 0.5 = 50% opacity.
+
+Since "<div>"s are block elements, they stack vertically, like building blocks. To place them side-by-side:
+
+  .cap, .sleeve {
+    display: inline-block;
+  }
+  
+- However, you must define **width**, **style**, and **(optionally) color** of their border to be visible. Such as, for example:
+
+  border-left: 4px solid black;
+  
+- Common border styles include "solid", "dashed", "dotted", "double" (two solid lines).
+
+You can also give your various HTML elements a shadow using the following CSS attribute:
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+
+- **offsetX**: Horizontal shift
+- **offsetY**: Vertical shift
+- **blurRadius** *(optional)*: Softens edges
+- **spreadRadius** *(optional)*: Expands size
+- Example with all values:
+
+  box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.5);
