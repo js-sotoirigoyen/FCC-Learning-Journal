@@ -1,0 +1,24 @@
+- "vh" (Viewport Height): Represents 1% of the viewport height. For example, "100vh" equals the full height of the viewport (that is, the visible screen).
+- "rem" (Root em): Relative to the font size of the root element ("<html>"). If the root font size is 16px, then "1rem" equals 16px. This unit helps maintain consistent sizing across elements.
+
+- "<form>" Element: Encapsulates form controls. The "action" attribute specifies the URL to send the form data to upon submission, and the "method" attribute defines the HTTP method ("GET" or "POST").
+- "<label>" Element: Associates text labels with form controls. Using "display: block" and "margin: 0.5rem 0" in CSS ensures labels appear on separate lines with appropriate spacing.
+- "for" Attribute: Links a "<label>" to a form control by matching the "for" value with the "id" of the control, enhancing accessibility. 
+
+- Text Inputs: Use "type="text"" for general text fields.
+- Email Input: "type="email"" ensures the input contains a valid email format (e.g., includes "@" and a domain).
+- Password Input: "type="password"" masks the input for privacy.
+- File Upload: "<input type="file">" allows users to upload files.
+- Required Fields: Adding the "required" attribute to input elements mandates that users fill them out before submission.
+- Pattern Validation: The "pattern" attribute allows for custom input validation using regular expressions. For example, "pattern="[a-z0-5]{8,}"" ensures the input consists of at least eight lowercase letters or digits 0-5.
+
+- Grouping: Wrap related radio buttons within a "<fieldset>" and use a "<legend>" to provide context.
+- Default Selection: Use the "checked" attribute on one radio input to set it as the default selected option.
+
+- Dropdown Menus: Use "<select>" to create a dropdown, containing multiple "<option>" elements. Assign a "value" attribute to each "<option>" to specify the data sent upon form submission. 
+
+- Textarea: "<textarea>" provides a multi-line text input. Good practice says to associate it with a "<label>" and include a "name" attribute for form data identification.
+
+- ":last-of-type": A pseudo-class that targets the last element of a given type among its siblings. For example, "p:last-of-type" selects the last "<p>" element within its parent.
+- Attribute Selectors: Select elements based on attribute values. For instance, "input[name="password"]" targets input elements with "name="password"".
+
