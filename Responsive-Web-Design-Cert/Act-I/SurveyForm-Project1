@@ -1,0 +1,353 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan's Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#title">Top</a></li>
+      <li><a href="#survey-form">Form</a></li>
+      <li><a href="https://www.astrology.com/zodiac-signs" target="_blank" rel="noopener noreferrer">Zodiac Info</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1 id="title">Juan's Survey Form</h1>
+    <p id="description">Allow me to survey you—and better develop my HTML + CSS skills!</p>
+  </header>
+
+  <main class="form-container">
+    <form id="survey-form" name="survey-form">
+      
+      <img src="https://icons.veryicon.com/png/o/miscellaneous/rookie-official-icon-gallery/225-default-avatar.png" alt="Juan's avatar" class="form-image" height="120"/>
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name" id="name-label">Full Name:</label>
+        <input class="basic-info" id="name" name="name" type="text" placeholder="John Doe"
+          pattern="[A-Za-z ]{3,}" title="Name should be at least 3 characters long" required />
+
+        <label for="email" id="email-label">Email Address:</label>
+        <input class="basic-info" id="email" name="email" type="email" placeholder="john_doe@gmail.com" required />
+
+        <label for="number" id="number-label">Favorite Number:</label>
+        <input class="basic-info" id="number" name="number" type="number" placeholder="42" min="10" max="99" />
+      </fieldset>
+
+      <hr />
+
+      <fieldset>
+        <legend>Astrological Info</legend>
+        <label for="dropdown">Choose your sign:</label>
+        <select name="astrological-sign" id="dropdown" class="basic-info" required>
+          <option value="">--Please select--</option>
+          <optgroup label="Fire Signs">
+            <option value="Aries">Aries</option>
+            <option value="Leo">Leo</option>
+            <option value="Sagittarius">Sagittarius</option>
+          </optgroup>
+          <optgroup label="Earth Signs">
+            <option value="Taurus">Taurus</option>
+            <option value="Virgo">Virgo</option>
+            <option value="Capricorn">Capricorn</option>
+          </optgroup>
+          <optgroup label="Air Signs">
+            <option value="Gemini">Gemini</option>
+            <option value="Libra">Libra</option>
+            <option value="Aquarius">Aquarius</option>
+          </optgroup>
+          <optgroup label="Water Signs">
+            <option value="Cancer">Cancer</option>
+            <option value="Scorpio">Scorpio</option>
+            <option value="Pisces">Pisces</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <hr />
+
+      <fieldset>
+        <legend>Handedness</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="dominant-hand" value="right" checked /> Right</label>
+          <label><input type="radio" name="dominant-hand" value="left" /> Left</label>
+          <label><input type="radio" name="dominant-hand" value="either" /> Either</label>
+        </div>
+      </fieldset>
+
+      <hr />
+
+      <fieldset>
+        <legend>Hobbies in Common</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="reading" name="hobbies" /> Reading</label>
+          <label><input type="checkbox" value="coding" name="hobbies" /> Coding</label>
+          <label><input type="checkbox" value="writing" name="hobbies" /> Writing</label>
+        </div>
+      </fieldset>
+
+      <hr />
+
+      <fieldset>
+        <legend>Confessions Box</legend>
+        <label for="secrets">Anything you want to get off your chest?</label>
+        <textarea id="secrets" name="secrets" rows="5" cols="33" class="basic-info"
+          placeholder="Well, one time, I..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Agreement</legend>
+        <label>
+          <input type="checkbox" value="agreed-to-terms" required />
+          I agree to the survey's totally real and definitely binding terms.
+        </label>
+      </fieldset>
+
+      <button type="submit" id="submit">Tell me!</button>
+    </form>
+  </main>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  background: linear-gradient(#bc6c25, #dda15e);
+  color: #283618;
+  font-family: Futura, Verdana, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+nav {
+  background-color: #8c5e24;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fefae0;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #f4e2b8;
+  margin: 10px auto 25px auto;
+  border: 2px solid #5a4d1a;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  padding: 15px;
+}
+
+header p {
+  font-family: "American Typewriter", serif;
+  font-size: 0.85em;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Avatar Image */
+.form-image {
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  border: 3px solid #606c38;
+}
+
+/* Input styles */
+.basic-info,
+textarea,
+select {
+  display: block;
+  margin: 1em auto;
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+#submit {
+  background-color: #283618;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0 auto;
+  font-size: 1em;
+}
+
+#submit:hover {
+  background-color: #606c38;
+}
+
+/* Fieldsets and legends */
+fieldset {
+  border: 1px solid #606c38;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 1.5em auto;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.radio-group label,
+.checkbox-group label {
+  flex: 1;
+  text-align: center;
+}
+
+input,
+select,
+textarea,
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #606c38;
+  background-color: #fff8dc;
+}
+
+/* Divider line */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #606c38;
+  margin: 20px auto;
+  width: 85%;
+  border-radius: 5px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .form-container,
+  header {
+    width: 95%;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(#1d1d1d, #333);
+    color: #eee;
+  }
+
+  header {
+    background: #444;
+    border-color: #777;
+  }
+
+  nav {
+    background-color: #2f2f2f;
+  }
+
+  .nav-links a {
+    color: #ccc;
+  }
+
+  .form-container {
+    background: rgba(50, 50, 50, 0.5);
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #777;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    background-color: #2a2a2a;
+    color: #fff;
+    outline: 2px solid #a3b457;
+  }
+
+  fieldset {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #999
+  }
+
+  #submit {
+    background-color: #8b9a46;
+  }
+
+  #submit:hover {
+    background-color: #a3b457;
+  }
+}
+
+
+** end of styles.css **
+
