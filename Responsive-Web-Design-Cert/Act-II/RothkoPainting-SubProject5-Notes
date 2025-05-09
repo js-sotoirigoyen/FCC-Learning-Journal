@@ -1,0 +1,13 @@
+One way to envision CSS is to imagine the "Box Model", wherein every HTML is treated as a box with four, concentric areas: the content, the padding, the border, and the margin. You can imagine it like a delivery box.
+- The content is whatever item you purchased, inside the box.
+- The padding is the space around the item but within the box, like bubble-wrap. 
+- The border is the box itself, containing both the content and padding.
+- The margin is the space outside the box. 
+-- This last one is important, because it can be used to control the space between various HTML elements. A larger top margin, for example, pushes an item further down the page, and vice versa. 
+
+When adjusting space *inside* an element, use padding. When adjusting space *outside* an element, use margin.
+
+CSS, as has been previously noted, also has a variety of useful properties and functions. These include:
+- The filter property, which can be combined with the blur method (i.e., filter: blur(3px)) to blur an element.
+- The border-radius property, which accepts up to four values, rounding the top-left, top-right, bottom-right, and bottom-left corners varying amounts. 
+- The transform property, which can be combined with the rotate method (i.e., transform: rotate(-0.6deg)) to rotate an element.
