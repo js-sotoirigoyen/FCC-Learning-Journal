@@ -1,0 +1,55 @@
+By default, the browser uses the "content-box" model to calculate the size of elements. This means that the width of an element only includes the content — not the padding or border. Therefore, if you add padding or borders, the total size grows.
+
+To control this behaviour, then, you use the "box-sizing" property. For example:
+
+  * {
+    box-sizing: content-box;
+  }
+
+This explicitly sets the default behavior (because * is the "root" selector). However, a more useful alternative is:
+
+  * {
+    box-sizing: border-box;
+  }
+
+With "border-box", the total width and height includes content, padding, and border. This way, we can prevent layouts from unexpectedly expanding and keep everything neatly inside its container.
+
+One more "text-transform" property can be used to make text appear in all uppercase:
+
+  text-transform: uppercase;
+
+To create more responsive layouts, though, we can use "Flexbox". Flexbox works in one dimension at a time — either as a row or a column. To make an element a flex container, we set:
+
+  display: flex;
+
+Any children inside of it, then, become known as "flex items". The direction of the layour can be controled using the "flex-direction" property: 
+- "row" (the default): Left -> Right.
+- "row-reverse": L <- R.
+- "column": Top -> Bottom.
+- "column-reverse": T <- B.
+
+The "main axis", then, is based on the direction, with the "cross axis" always being perpendicular to that. It's still possible to run out of space, though, so we can use "flex-wrap" to control whether items wrap.
+- "nowrap" (the default): Items shrink to fit;
+- "wrap": Items move to a new row or column when needed.
+
+We can also use "justify-content" to align items along the "main axis" (e.g., horizontally in a "row" layout):
+- "center";
+- "space-between";
+- "space-around";
+- etc.
+Similarly, we can use "align-items" to align items along the "cross axis" (e.g., vertically in a "row" layout):
+
+  align-items: center;
+
+Different aspect ratios can cause images to become distorted, though, so the "object-fit" property, when set to "cover", can fix this. It keeps the image's aspect ratio, but crops it to fill its container. 
+
+In a flex layout, the spacing between the different flex items is controlled using the "gap" property, which applies spacing between rows and colums. To be more particular, we can set the "row-gap" and "column-gap" separately. 
+
+Finally, there is the "::after" pseudo-element. This allows us to insert content after an element, and can often be used to help adjust the layour or add decorative content. For example, 
+
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+
+This creates, after all the images in the gallery, an invisible box - which is useful when controlling alignment or spacing. 
