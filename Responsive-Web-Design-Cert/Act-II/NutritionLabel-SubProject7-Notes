@@ -1,0 +1,19 @@
+To further broaden our selection of fonts, it's possible to import directly from google. 
+By nesting a "link" element within the HTML document's own "head" element, with a "rel" attribute of "stylesheet" and an "href" attribute of, for example, "https://fonts.googleapis.com/css?family=Open+Sans:400,700,800", we can import the Open Sans font family at the font weight values of 400, 700, and 800. 
+However, do note that, when actually using fonts within a CSS document, those with spaces in their name must be wrapped in quotes (i.e., "font-family: "Open Sans"", not "font-family:Open Sans"). 
+
+The HTML document's semantic structure is made explicit through the use of "h1", "h2", and other, similar tags, but the visual hierarchy can be further adjusted through the use of CSS. 
+For example, setting the "font-weight" property to something like 800 will make text bolder, which can be useful; similarly, in the HTML itself, the "<i> </i>" tags can be used to italicize something without using the previously-established "<em> </em>", which has more particular meanings in terms of SEO and screen readers. 
+
+The "letter-spacing" property can further adjust the space between the characters in a given section of text.
+
+In cases like these, the "rem" unit (which stands for "root em") can be useful, as it's always relative to the initial font size of the "html" element itself. 
+For example, if the "html" element has a "font-size" of 16px, then using a "font-size" of 0.85rem elsewhere would result in a size of, roughly, 13.6px — or, in other words, 85% the size of the original. 
+
+One useful pseudo-selecter is the ":not" pseudo-selector. This particular bit of CSS can be used to select all the elements that do not match a given CSS rule, so...
+
+  div:not(#blue-div) {
+    color: red;
+  }
+
+... would select all the "div" elements that do not have an "id" of "blue-div" and make them red.
