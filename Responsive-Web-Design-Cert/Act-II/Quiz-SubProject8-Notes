@@ -1,0 +1,66 @@
+Adding a "lang" attribute to the "<html>" element helps screen readers identify the page's language. Further "<meta>" elements help specify more information about the page, such as character encoding, viewport settings, description, and more. For example:
+
+  <meta charset="UTF-8">
+  <!--For mobile accessibility...-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--A description for SEO...-->
+  <meta name="description" content="Your description here">
+
+The "<title>" element is, similarly, important for both screen readers and search engine results.
+
+The various, semantically-specific HTML elements are essential in improving the accessibility of a web page.
+- "<header>" introduces the page and often contains navigation.
+- "<main>" holds the primary content.
+- "<footer>" contains related info or links.
+- "<address>" is used for contact details.
+
+Responsive CSS often uses functions like "max()":
+
+  img {
+    width: max(250px, 25vw);
+  }
+
+This sets the width to the larger of 250px or 25% of the viewport width.
+
+To target children only in a snippet of CSS, we use the child combinator, ">". For example, targeting all the unordered lists that are children of the navigation:
+
+  nav > ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+Assistive tech also checks the "role" attribute of various elements to better understand their purpose. When using a "role="region"", include an accessible label. This is commonly done by adding an "aria-labelledby" attribute that matches the "id" of a heading inside the region.
+
+  <section aria-labelledby="student-info">
+    <h2 id="student-info">Student Info</h2>
+  </section>
+
+Similarly, always link labels to their inputs using the "for" attribute, even when the input is nested inside the label.
+
+It's also recommended that we use accessible fonts, which are easy to read on all screen types. Avoid highly stylized or hard-to-read fonts, especially at small sizes. Text-colour contrast is crucial for readability. Aim for at least a 4.5:1 contrast ratio between text and background. For links or small text, aim for 7:1.
+
+It might also be a good idea to avoid using "placeholder" text as a replacement for a proper, outside-the-input label, as it might make certain users think the field is already filled out. 
+
+One possibility is to make elements readable by screen readers but hidden from sighted users, using the ".sr-only" pattern:
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+For cleaner list styles, we can also use "list-style" to change bullets. The following, for example, eliminates them entirely:
+
+  ul {
+    list-style: none;
+  }
+
+Anchor links can sometimes be disorientating, so we can enable smoother scrolling betwee them by applying the following bit of CSS:
+
+  * {
+    scroll-behavior: smooth;
+  }
